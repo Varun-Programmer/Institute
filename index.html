@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Institute</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+<style>
+	@media screen and (max-width:706px)
+	{
+		.aa
+		{
+			width:100px;
+			height:60px;
+		}
+		.bb
+		{
+			font-size:30px!important;
+		}
+	}
+	.gg
+	{
+		display:none;
+	}
+	.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl 
+	{
+		width: 95%;
+		padding-right:0px;
+		padding-left: 0px;
+	}
+	.icon
+	{
+		font-size:20px;
+		padding-right:8px;
+	}
+	@media screen and (max-width:542px)
+	{
+		.bb
+		{
+			display:none;
+		}
+		.gg
+		{
+			display:block;
+		}
+	}
+	@media screen and (min-width: 1100px)
+	{
+		.navbar-expand-lg .navbar-nav .nav-link 
+		{
+			padding-right: 0.5rem;
+			padding-left: 2.5rem;
+		}
+	}
+	ul li:hover
+	{
+		border-bottom:4px solid white;
+	}
+	ul li:hover .dropdown-menu
+	{
+		display:block;
+	}
+	.nn:hover
+	{
+		background-color:pink;
+	}
+	@media screen and (min-width:200px)
+	{
+		.container, .container-lg, .container-md, .container-sm 
+		{
+			max-width: 1480px !important;
+		}
+	}
+	@media screen and (min-width:541px)
+	{
+		.ll
+		{
+			width:100%;
+		}
+	}
+	@media screen and (max-width:541px)
+	{
+		.ll
+		{
+			width:100%;
+		}
+	}
+	.hh
+	{
+		background-image:url(img/4.jpg);
+		background-size:100% 100%;
+	}
+	@media screen and (min-width:408px)
+	{
+		.nm
+		{
+			font-size:70px;
+		}
+	}
+	@media screen and (max-width:408px)
+	{
+		.nm
+		{
+			font-size:40px;
+		}
+	}
+	@media screen and (max-width:540px)
+	{
+		.ff
+		{
+			margin-right:20px;
+		}
+	}
+	body
+	{
+		width:100%;
+	}
+	@media screen and (max-width:325px)
+	{
+		.mn
+		{
+			font-size:33px !important;
+		}
+	}
+	.vv
+	{
+		font-size:50px;
+	}
+	@media screen and (max-width:767px)
+	{
+		.qq
+		{
+			border-bottom:4px solid white;
+		}
+	}
+	@media screen and (min-width:767px)
+	{
+		.ww
+		{
+			margin-right:100px;
+		}
+	}
+	.jk:hover
+	{
+		color:cyan;
+		border:10px solid cyan !important;
+	}
+	.form-control 
+	{
+		display: block;
+		width: 92% !important;
+	}
+	body
+	{
+		background-color:black;
+	}
+	.img-fluid
+	{
+		width:90% !important;
+	}
+	.carousel-control-next-icon, .carousel-control-prev-icon 
+	{
+		display: inline-block;
+		width: 39px;
+		height: 34px;
+		background-color:red;
+		border-radius:50%;
+	}
+	.carousel-control-next, .carousel-control-prev 
+	{
+   		color: green;
+		opacity: 5.5;
+	}
+	.kk
+	{
+		color:white;
+	}
+	.kk:hover
+	{
+		color:blue;
+	}
+	.uu
+	{
+		color:white;
+	}
+	.uu:hover
+	{
+		color:red;
+	}
+	.cc
+	{
+		color:white;
+	}
+	.cc:hover
+	{
+		color:skyblue;
+	}
+	.za
+	{
+		color:white;
+	}
+	.za:hover
+	{
+		color:yellow;
+	}
+	.nq:hover
+	{
+		text-decoration:underline;
+		cursor:pointer;
+	}
+	
+</style>
+<script>
+	
+
+</script>
+</head>
+<body onload="change();numbers1();numbers2();numbers3()">
+    <!--Navbar-->
+	<div class="container-fluid gg text-white" style="background-color:#662666">
+		<div class="row vf">
+			<div class="col-md-12 text-center"><p class="h1 px-3">ALGORITHM INSTITUTE</p></div>
+		</div>
+	</div>
+	<div class="container-fluid">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark ll" style="background-color:#662666;">
+	<img src="img/Logo.jpg" width="150px" height="110px" class="badge-pill aa"/>
+  <a class="navbar-brand bb" style="font-size:40px;font-weight:bolder" href="#">ALGORITHM INSTITUTE</a>
+  <button class="navbar-toggler ff" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto text-center">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="font-weight:bolder;border-bottom:1px solid white"><i class="fa fa-home icon"></i>HOME</a>
+      </li>
+	  <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" style="color:yellow" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-tasks icon"></i>COURSES
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item nn" href="#"><img src="img/C.png" class="icon" width="40px"/>C</a>
+          <a class="dropdown-item nn" href="#"><img src="img/C++.png" class="icon" width="40px"/>C++</a>
+          <a class="dropdown-item nn" href="#"><img src="img/DS.png" class="icon" width="40px"/>DATA STRUCTURES</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/HTML.png" class="icon" width="40px"/>HTML 5</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/CSS.png" class="icon" width="40px"/>CSS 3</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/JS.png" class="icon" width="40px"/>JAVASCRIPT</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/Bootstrap.png" class="icon" width="40px"/>BOOTSTRAP 4</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/AJAX.png" class="icon" width="40px"/>AJAX</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/PHP.png" class="icon" width="40px"/>PHP</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/JAVA.png" class="icon" width="40px"/>CORE JAVA</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/Advance Java.png" class="icon" width="40px"/>ADVANCE JAVA</a>
+		  <a class="dropdown-item nn" href="#"><img src="img/Jquery.png" class="icon" width="40px"/>JQUERY</a>
+	   </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color:yellow" href="#"><i class="fa fa-address-book icon"></i>ABOUT</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" style="color:yellow" href="#"><i class="fa fa-envelope icon"></i>CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>
+	<div class="container bg-primary">
+	<div class="row w-100 no-gutters">
+		<div class="card hh w-100">
+			<div class="card-body text-center text-white">
+				<h3 class="card-text py-4 nm" style="font-family:Algerian;color:cyan">DELIVERING QUALITY EDUCATION</h3>
+				<h1 class="card-text px-4 py-4 mn" id="Text" style="color:#7FFF00;font-size:60px"></h1>
+			</div><br/>
+			<div class="row text-white text-center">
+				<div class="col-md-3 h4"><i class="fa fa-users vv"></i><br/><br/>STUDENTS<br/><br/>
+					<div class="col-md-12 h1 qq" id="X"></div>
+				</div>
+				<div class="col-md-5 h4"><i class="fa fa-tasks vv"></i><br/><br/>COURSES<br/><br/>
+					<div class="col-md-12 h1 qq" id="Y"></div>
+				</div>
+				<div class="col-md-3 h4"><i class="fa fa-user vv"></i><br/><br/>TEACHER<br/><br/>
+					<div class="col-md-12 h1 qq" id="Z"></div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4 text-center"><br/>
+					<button class="btn btn-primary ww">START A COURSE</button>
+				</div>
+			</div>
+			<br/>
+		</div>
+	</div>
+	</div>
+	<div class="container" style="background-image: linear-gradient(to left bottom, #370505, #712c0e, #9f6200, #b3a300, #a3eb12);">
+		<div class="row justify-content-center">
+			<div class="col-md-8 text-center">
+				<p class="h1 px-3 py-3" style="color:#7CFC00"><i class="fa fa-code" style="padding-right:10px"></i>
+					WELCOME TO ALGORITHM INSTITUTE<i class="fa fa-code px-2"></i>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="background-color:black">
+		<div class="row mt-5 text-white">
+			<div class="col-md-4 text-center">
+				<i class="fa fa-send mt-5 jk mb-5 px-4 py-4" style="font-size:50px;border:10px double white;border-radius:50%;"></i>
+				<h3>QUALITY EDUCATION</h3>
+				<div class="col-md-8 offset-md-2" style="border-bottom:4px solid white"></div>
+				<div class="col-md-8 offset-md-2 mt-2" style="border-bottom:4px solid white"></div>
+			</div>
+			<div class="col-md-4 text-center">
+				<i class="fa fa-clipboard mt-5 jk mb-5 px-4 py-4" style="font-size:50px;border:10px double white;border-radius:50%;"></i>
+				<h3>SYSTEMATIC APPROACH</h3>
+				<div class="col-md-8 offset-md-2" style="border-bottom:4px solid white"></div>
+				<div class="col-md-8 offset-md-2 mt-2" style="border-bottom:4px solid white"></div>
+			</div>
+			<div class="col-md-3 text-center">
+				<i class="fa fa-check mt-5 jk mb-5 px-4 py-4" style="font-size:50px;border:10px double white;border-radius:50%;"></i>
+				<h3>ONE TO ONE STUDY</h3>
+				<div class="col-md-8 offset-md-2" style="border-bottom:4px solid white"></div>
+				<div class="col-md-8 offset-md-2 mt-2" style="border-bottom:4px solid white"></div>
+			</div>
+		</div><br/><br/><br/><br/><hr/>
+	</div>
+	
+	<div class="container" style="background-image:url(img/6.jpg);background-size:100% 100%;">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p class="h1 px-3 pt-5" style="color:cyan;text-decoration:underline">POPULAR COURSES</p>
+			</div>
+			<div class="col-md-12">
+				<section class="pt-5 pb-5">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-3 text-center col-lg-2">
+            <a class="btn btn-danger mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+            <a class="btn btn-danger mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="col-12">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner mb-5">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/C.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">C</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/C++.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">C++</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/DS.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">DATA STRUCTURES</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/HTML.png"/>
+                                    <div class="card-body">
+                                        <h4 class="card-title">HTML 5</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/CSS.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">CSS 3</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/JAVA.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">CORE JAVA</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/Jquery.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">JQUERY</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/JS.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">JAVASCRIPT</h4>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/PHP.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">PHP</h4>
+										<p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="carousel-item">
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/Bootstrap.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">BOOTSTRAP</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/AJAX.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">AJAX</h4>
+                                        <p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3 mx-5">
+                                <div class="card">
+                                    <img class="img-fluid" alt="100%x280" src="img/Advance Java.png">
+                                    <div class="card-body">
+                                        <h4 class="card-title">ADVANCE JAVA</h4>
+										<p class="card-text text-center mt-4">
+											<button class="btn btn-primary">KNOW MORE</button>
+										</p>
+								   </div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+        </div>
+    
+	</div>
+	</div>
+	<div class="container" style="background-color:chocolate">
+		<div class="row">
+			<div class="col-md-12 text-center" style="color:#00FF7F">
+				<p class="h1 px-3 py-4">OUR FACULTY</p><hr/>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="background-color:chocolate;">
+		<div class="row">
+			<div class="col-md-5 mx-4 mt-5 text-center" style="color:#00FF7F">
+				<img src="img/5.jpg" class="img-fluid"/>
+			</div>
+			<div class="col-md-6 mt-5">
+				<p class="h1 text-center mt-5" style="color:black;font-weight:bolder">VISHAL KAPOOR</p>
+				<p class="h4 text-justify mt-4 px-5 py-2" style="color:white">
+					Learn to code with me in a very simple way. We amplify important ideas in programming 
+					education to help students grow their skills and achieve something in life.
+					We have a variety of courses available here. Learn Anytime, Anywhere. Accelerate Your Future.
+					We believe everyone has the capacity to be creative. Skill is a place where 
+					people develop their own potential.
+					You only have to know one thing.
+					You can learn anything.
+				</p>
+			</div>
+		</div><br/><br/><br/>
+	</div>
+	<div class="container">
+		<div class="row mt-5 mb-5">
+			<div class="col-md-6 text-white text-center">
+				<p class="px-3 py-5 h1" style="font-family:Bookman Old Style">Join us for FREE to get instant email updates!</p>
+				<p class="px-3 h3">Subscribe and get notified at first on the latest update and offers!</p>
+				<input type="text" class="form-control pl-3 mx-3 my-4" placeholder="Your Email here"/>
+				<input type="text" class="form-control pl-3 mx-3 my-4" placeholder="Your Name here"/>
+				<select class="form-control ml-3 mb-3 mr-3">
+					<option>--Select course you want to learn--</option>
+					<option>C Language</option>
+					<option>C++ Language</option>
+					<option>Data Structures</option>
+					<option>AJAX</option>
+					<option>Core JAVA</option>
+					<option>Advance JAVA</option>
+					<option>HTML 5</option>
+					<option>CSS 3</option>
+					<option>Javascript</option>
+					<option>JQuery</option>
+					<option>PHP</option>
+					<option>Bootstrap</option>
+				</select>
+				<button class="btn w-75 ml-3 mt-4 mr-3 btn-warning">SUBSCRIBE</button>
+			</div>
+			<div class="col-md-6 text-center">
+				<img src="img/8.jpg" class="img-fluid mx-1 mt-5"/>
+			</div>
+		</div><br/>
+	</div>
+	<div class="container" style="background-color:pink">
+		<div class="row justify-content-center">
+			<div class="col-md-12 text-center"><p class="h1 pt-5 px-3" style="font-family:Algerian">WHAT OUR STUDENTS ARE SAYING ABOUT US?</p></div>
+		</div>
+		<div class="row justify-content-center">
+		<div class="col-md-3 text-center">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    <div class="carousel-item active">
+		<div class="card mt-4">
+  <img class="card-img-top" src="img/9.jpg" style="height:300px" alt="Card image cap">
+  <div class="card-body">
+	<h5 class="card-title">VARUN KUMAR</h5>
+    <p class="card-text">One of the best institute of coding in Yamuna Nagar.</p>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+		<div class="card mt-4" >
+  <img class="card-img-top" src="img/9.jpg" style="height:300px" alt="Card image cap">
+  <div class="card-body">
+	<h5 class="card-title">VARUN KUMAR</h5>
+    <p class="card-text">One of the best institute of coding in Yamuna Nagar.</p>
+  </div>
+</div>
+    </div>
+    <div class="carousel-item">
+      <div class="card mt-4">
+  <img class="card-img-top" src="img/9.jpg" style="height:300px" alt="Card image cap">
+  <div class="card-body">
+	<h5 class="card-title">VARUN KUMAR</h5>
+    <p class="card-text">One of the best institute of coding in Yamuna Nagar.</p>
+  </div>
+</div>
+    </div>
+  </div>
+  <br/><br/>
+</div>
+		</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 text-center text-white">
+				<i class="fa fa-home px-3 py-4" style="font-size:50px"></i>
+				<h1 class="px-3">OUR LOCATION</h1><hr style="border:2px solid white"/>
+				<h5 class="px-3 py-5">ALGORITHM INSTITUTE,NEAR BUS STAND,OPPOSITE POST OFFICE,YAMUNA NAGAR,HARYANA-135001</h5>
+				<hr style="border:2px solid white"/>
+				<i class="fa fa-phone px-3 py-1" style="font-size:40px"></i><h5>9375345476</h5>
+				<hr style="border:2px solid white"/>
+				<i class="fa fa-envelope" style="font-size:50px"></i><h5 class="px-2">vishalkapoor38579@gmail.com</h5>
+				<hr style="border:2px solid white"/>
+			</div>
+			<div class="col-md-6 text-center">
+				<p class="h1 pr-4 pt-4 pb-1 text-white"><i class="fa fa-whatsapp pr-4 mx-5 mb-4"></i><br/>SOCIAL CONNECTIVITY</p>
+				<hr style="border:2px solid white"/>
+				<i class="fa fa-facebook kk mt-3 mx-4" style="font-size:50px"></i>
+				<i class="fa fa-instagram uu mt-3 mx-4" style="font-size:50px"></i>
+				<i class="fa fa-twitter cc mt-3 mx-4" style="font-size:50px"></i>
+				<i class="fa fa-snapchat za mt-3 mx-4" style="font-size:50px"></i>
+				<hr style="border:2px solid white"/>
+				<p class="h1 text-warning px-3 pt-5 pb-4 nq">JOIN NOW</p>
+				<p class="h1 text-danger px-3 py-4" style="font-family:cursive">HOME TUITIONS ALSO AVAILABLE</p>
+				<hr style="border:2px solid white" class="mt-5"/>
+			</div>
+			<div class="col-md-3 text-center">
+				<p class="h1 px-3 pt-4 pb-1 text-white"><i class="fa fa-link pr-4 mx-5 mb-4"></i><br/>QUICK LINKS</p>
+				<hr style="border:2px solid white"/>
+				<a href="#" class="h3">C</a><br/>
+				<a href="#" class="h3">C++</a><br/>
+				<a href="#" class="h3">DATA STRUCTURES</a><br/>
+				<a href="#" class="h3">PHP</a><br/>
+				<a href="#" class="h3">AJAX</a><br/>
+				<a href="#" class="h3">HTML 5</a><br/>
+				<a href="#" class="h3">CSS 3</a><br/>
+				<a href="#" class="h3">BOOTSTRAP 4</a><br/>
+				<a href="#" class="h3">JAVASCRIPT</a><br/>
+				<a href="#" class="h3">JQUERY</a><br/>
+				<a href="#" class="h3">Core JAVA</a><br/>
+				<a href="#" class="h3">Advance JAVA</a><br/>
+				<hr style="border:2px solid white"/>
+			</div>
+		</div>
+	</div>
+	<script>
+		function change()
+		{
+			document.getElementById("Text").innerHTML="LEARN TO CODE";
+			$(document).ready(function(){
+				$("#Text").fadeOut(1500);
+			});
+			setTimeout("abc()",1500);
+		}
+		function abc()
+		{
+			
+			document.getElementById("Text").innerHTML="THE UNIQUE WAY";
+			$(document).ready(function(){
+				$("#Text").fadeIn(1500);
+			});
+			$(document).ready(function(){
+				$("#Text").fadeOut(1500);
+			});
+			setTimeout("change()",1500);
+		}
+		var x=0,y=0,z=0;
+		function numbers1()
+		{
+			document.getElementById("X").innerHTML=x;
+			if(x<390)
+			{
+				x++;
+				setTimeout("numbers1()",20);
+			}
+		}
+		function numbers2()
+		{
+			document.getElementById("Y").innerHTML=y;
+			if(y<12)
+			{
+				y++;
+				setTimeout("numbers2()",200);
+			}
+		}
+		function numbers3()
+		{
+			document.getElementById("Z").innerHTML=z;
+			if(y<2)
+			{
+				z++;
+				setTimeout("numbers3()",1000);
+			}
+		}
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+</body>
+</html>
